@@ -17,6 +17,8 @@ do
 done
 
 # Initialize log directory.
+touch aaa.txt
+echo "1234" > aab.txt
 echo '!!!!! Initializing logs, path:'
 pwd
 echo '!!!!! Initializing logs, ls:'
