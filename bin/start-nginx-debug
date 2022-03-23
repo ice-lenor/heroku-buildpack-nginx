@@ -17,21 +17,23 @@ do
 done
 
 # Initialize log directory.
-touch aaa.txt
-echo "1234" > aab.txt
+echo "!!!!! echoing $PWD"
+echo $PWD
+touch $PWD/aaa.txt
+echo "1234" > $PWD/aab.txt
 echo '!!!!! Initializing logs, path:'
 pwd
 echo '!!!!! Initializing logs, ls:'
 ls
-mkdir -p logs/nginx
-touch logs/nginx/access.log logs/nginx/error.log
-echo '!!!!! Initialized logs, ls in this folder:'
-pwd
-ls
+mkdir -p $PWD/logs/nginx
+touch $PWD/logs/nginx/access.log $PWD/logs/nginx/error.log
+echo '!!!!! Initialized logs, ls in PWD folder:'
+echo $PWD
+ls $PWD
 echo '!!!!! Initialized logs, ls in ./logs folder:'
-ls ./logs
+ls $PWD/logs
 echo '!!!!! Initializing logs, ls in ./logs/nginx folder:'
-ls ./logs/nginx/
+ls $PWD/logs/nginx/
 echo 'buildpack=nginx at=logs-initialized'
 
 # Start log redirection.
