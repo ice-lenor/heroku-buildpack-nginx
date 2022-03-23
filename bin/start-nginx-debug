@@ -23,8 +23,13 @@ echo '!!!!! Initializing logs, ls:'
 ls
 mkdir -p logs/nginx
 touch logs/nginx/access.log logs/nginx/error.log
-echo '!!!!! Initializing logs, ls in logs folder:'
-ls logs/nginx/
+echo '!!!!! Initialized logs, ls in this folder:"
+pwd
+ls
+echo '!!!!! Initialized logs, ls in ./logs folder:"
+ls ./logs
+echo '!!!!! Initializing logs, ls in ./logs/nginx folder:'
+ls ./logs/nginx/
 echo 'buildpack=nginx at=logs-initialized'
 
 # Start log redirection.
